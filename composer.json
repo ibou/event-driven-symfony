@@ -4,7 +4,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "symfony/console": "7.1.2",
@@ -19,6 +19,7 @@
         "symfony/yaml": "7.1.1"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
         "overtrue/phplint": "9.4.1",
         "phpstan/phpstan": "1.11.7",
         "phpunit/phpunit": "11.2.7",
@@ -68,7 +69,9 @@
         "run-phpstan": "vendor/bin/phpstan analyse",
         "run-phpcs": "vendor/bin/phpcs",
         "run-phplint": "vendor/bin/phplint",
-        "run-phpunit": "vendor/bin/phpunit --testsuite Unit,Application --testdox"
+        "run-phpunit": "vendor/bin/phpunit --testsuite Unit,Application --testdox",
+        "simple-tests": "vendor/bin/phpunit tests --testdox",
+        "fix": "vendor/bin/php-cs-fixer fix tests/ --rules=@Symfony --allow-risky=yes --dry-run"
     },
     "conflict": {
         "symfony/symfony": "*"

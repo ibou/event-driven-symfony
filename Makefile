@@ -18,6 +18,21 @@ DOCKER_COMPOSE = docker-compose -p php-even-driven
 PHPUNIT = vendor/bin/phpunit
 #------------#
 
+## Help
+help:
+	@printf "${COLOR_TITLE_BLOCK}App Makefile${COLOR_RESET}\n"
+	@printf "\n"
+	@printf "${COLOR_COMMENT}Usage:${COLOR_RESET}\n"
+	@printf " make [target]\n\n"
+	@printf "${COLOR_COMMENT}Available targets:${COLOR_RESET}\n"
+	@awk '/^[a-zA-Z\-\_0-9\@]+:/ { \
+		helpLine = match(lastLine, /^## (.*)/); \
+		helpCommand = substr($$1, 0, index($$1, ":")); \
+		helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
+		printf " ${COLOR_INFO}%-16s${COLOR_RESET} %s\n", helpCommand, helpMessage; \
+	} \
+	{ lastLine = $$0 }' $(MAKEFILE_LIST)
+
 ## launch docker containers, no rebuild
 start:
 	@$(DOCKER_COMPOSE) up -d --build --force-recreate --remove-orphans
@@ -40,8 +55,10 @@ restart: stop start
 shell-app:
 	@$(DOCKER_PHP)
 
-tests:
-	docker exec -it app sh -c "cd framework && vendor/bin/phpunit tests --colors"
+## tests unit
+phpunit:
+	docker exec -it app composer simple-tests
 
 domimi:
 	docker exec app php bin/console database:migrations:migrate
+
