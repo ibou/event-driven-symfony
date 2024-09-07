@@ -1,0 +1,17 @@
+version: '3.8' # docker-compose.yaml
+
+services:
+  web:
+    image: garyclarke/nginx24-multi
+    container_name: web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public:/var/www/html/public
+  app:
+    image: garyclarke/php83-multi
+    container_name: app
+    volumes:
+      - .:/var/www/html
+    extra_hosts:
+      - host.docker.internal:host-gateway
