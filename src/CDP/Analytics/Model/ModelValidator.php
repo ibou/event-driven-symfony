@@ -8,7 +8,7 @@ use App\Error\Exception\WebhookException;
 use ReflectionClass;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
-class ModelValidator
+readonly class ModelValidator
 {
     public function __construct(
         private ValidatorInterface $validator
