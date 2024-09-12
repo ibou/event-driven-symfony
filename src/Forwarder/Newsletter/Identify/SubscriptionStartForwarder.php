@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Forwarder\Newsletter\Identify;
 
+use App\CDP\Analytics\Model\ModelValidator;
 use App\CDP\Analytics\Model\Subscription\Identify\IdentifyModel;
 use App\CDP\Analytics\Model\Subscription\Identify\SubscriptionStartMapper;
 use App\CDP\Http\CdpClientInterface;
@@ -16,7 +17,8 @@ class SubscriptionStartForwarder implements ForwarderInterface
 
 
     public function __construct(
-        private CdpClientInterface $cdpClient
+        private CdpClientInterface $cdpClient,
+        private ModelValidator $modelValidator
     ) {
     }
     public function supports(NewsletterWebhook $newsletterWebhook): bool
@@ -29,6 +31,7 @@ class SubscriptionStartForwarder implements ForwarderInterface
         $model = new IdentifyModel();
         (new SubscriptionStartMapper())->map($newsletterWebhook, $model);
 
+        $this->modelValidator->validate($model);
         $this->cdpClient->identify($model);
     }
 }

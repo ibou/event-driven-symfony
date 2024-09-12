@@ -71,7 +71,7 @@
         "run-phplint": "vendor/bin/phplint",
         "run-phpunit": "vendor/bin/phpunit --testsuite Unit,Application --testdox",
         "simple-tests": "vendor/bin/phpunit tests --testdox",
-        "fix": "vendor/bin/php-cs-fixer fix tests/ --rules=@Symfony --allow-risky=yes --dry-run"
+        "run-fix": "vendor/bin/php-cs-fixer fix tests/ --rules=@Symfony --allow-risky=yes --dry-run"
     },
     "conflict": {
         "symfony/symfony": "*"

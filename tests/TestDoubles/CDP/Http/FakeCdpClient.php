@@ -6,6 +6,7 @@ namespace App\Tests\TestDoubles\CDP\Http;
 
 use App\CDP\Analytics\Model\ModelInterface;
 use App\CDP\Http\CdpClientInterface;
+
 class FakeCdpClient implements CdpClientInterface
 {
     private int $identifyCallCount = 0;

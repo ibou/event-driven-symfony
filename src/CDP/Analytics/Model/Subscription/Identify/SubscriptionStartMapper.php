@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace App\CDP\Analytics\Model\Subscription\Identify;
 
 use App\CDP\Analytics\Model\Subscription\SubscriptionSourceInterface;
+use App\Error\Exception\WebhookException;
+use Throwable;
 
 class SubscriptionStartMapper
 {
-    public function map(SubscriptionSourceInterface $source, IdentifyModel $target)
+    public function map(SubscriptionSourceInterface $source, IdentifyModel $target): void
     {
         try {
             $target->setProduct($source->getProduct());

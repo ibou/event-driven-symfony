@@ -27,10 +27,13 @@ services:
         App\Forwarder\Newsletter\ForwarderInterface:
             tags: [ 'forwarder.newsletter' ]
 
-    App\CDP\http\CdpClientInterface: '@App\CDP\http\CdpClient'
+    App\CDP\Http\CdpClientInterface: '@App\CDP\Http\CdpClient'
 
 
 when@test:
     services:
         App\Tests\TestDoubles\CDP\Http\FakeCdpClient: ~
         App\CDP\Http\CdpClientInterface: '@App\Tests\TestDoubles\CDP\Http\FakeCdpClient'
+
+        App\Tests\TestDoubles\Error\FakeErrorHandler: ~
+        App\Error\ErrorHandlerInterface: '@App\Tests\TestDoubles\Error\FakeErrorHandler'

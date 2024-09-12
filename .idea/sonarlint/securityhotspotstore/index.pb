@@ -72,3 +72,35 @@ S
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+Z
+*src/CDP/Analytics/Model/ModelValidator.php,2/7/27470102d6edb3b3714dae3c0d50335cf003d059
+i
+9src/Tests/Unit/CDP/Analytics/Model/ModelValidatorTest.php,5/e/5e9ee465bedaa304c5237fe30b05ab079afa1b89
+\
+,tests/TestDoubles/CDP/Http/FakeCdpClient.php,b/9/b9f8dc0bfe98a095df7ef04d8d29406c5b0eaff3
+e
+5tests/Unit/CDP/Analytics/Model/ModelValidatorTest.php,f/d/fd7626d10b1b165963f47f56994f11fcff48b0ce
+h
+8src/Forwarder/Newsletter/Track/SubscriptionForwarder.php,4/6/4683f8c5c3c825967ebf709fa32d7d805806d3b2
+i
+9src/CDP/Analytics/Model/Subscription/Track/TrackModel.php,0/d/0d8425c68eb2da7f5551fd504243056dca6aabfb
+q
+Asrc/CDP/Analytics/Model/Subscription/Track/SubscriptionMapper.php,d/a/da7483dd01497a19d54cd5de7194e9c73116fcf6
+P
+ tests/Controller/ArrayFilter.php,c/3/c3fcf3c77bea0f8ca5f4ba520d734c2dbcf610a5
+T
+$tests/Unit/Utils/ArrayFilterTest.php,6/1/6187f52dd629cf2775e481f955e79c8e1c273f19
+U
+%tests/Unit/CDP/Http/CdpClientTest.php,1/9/1938f0c796d496910efe5620f59591a068da6224
+]
+-tests/Unit/CDP/Http/ErrorHandlerInterface.php,1/2/125604a3efce435363fe264d58ff437b9fd4488a
+K
+config/FakeErrorHandler.php,8/4/84da7b223268da28e412bceb6e680616ea739d95
+B
+config/bundles.php,f/a/fa9a09a4e1ae4281250526d3dec214138beb5735
+\
+,tests/TestDoubles/Error/FakeErrorHandler.php,c/0/c0f845c98e085c8e3116ba69c00443bf136ca698
+O
+src/Error/DebugErrorHandler.php,e/b/eb0e687d1cb3e092c304f20aec1b27553668289c
+J
+src/Error/ErrorHandler.php,4/e/4ed54df9e567d74dc5d61af1cff621ef257308d5

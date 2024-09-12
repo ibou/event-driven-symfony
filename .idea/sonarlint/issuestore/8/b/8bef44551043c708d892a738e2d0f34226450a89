@@ -1,2 +1,4 @@
 
-v	php:S4144\"UUpdate this method so that its implementation is not identical to "getId" on line 30.(¨Òµüÿÿÿÿ8¿Óöœ2
+‰	php:S1448"mClass "NewsletterWebhook" has 24 methods, which is greater than 20 authorized. Split it into smaller classes.(…ôã”8ÒÎ°2
+v	php:S4144]"UUpdate this method so that its implementation is not identical to "getId" on line 31.(¨Òµüÿÿÿÿ8ÒÎ°2
+~	php:S4144‡"\Update this method so that its implementation is not identical to "getEventDate" on line 87.(ÖÇ¥—ûÿÿÿÿ8ÒÎ°2
