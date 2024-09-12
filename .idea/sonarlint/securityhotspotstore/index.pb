@@ -37,8 +37,6 @@ B
 config/preload.php,5/7/57f539ca2492dde303b2e757baaa84418aca539f
 [
 +tests/Controller/WebhooksControllerTest.php,1/e/1ec73aeaeed7783f7520152f9a0a426867324472
-_
-/src/DTO/NewsletterWebhook/NewsletterWebhook.php,9/7/97887f9cec7193236ffe468b484f0a827e3f76ca
 X
 (src/DTO/Newsletter/NewsletterWebhook.php,8/b/8bef44551043c708d892a738e2d0f34226450a89
 Q
@@ -49,11 +47,17 @@ N
 config/packages/framework.yaml,d/f/df607fe73ff82c569824a7392edf5e760e998efe
 g
 7src/DTO/Newsletter/Factory/NewsletterWebhookFactory.php,3/f/3f839345e9e85c92bd29f50f043c444108fd5658
-i
-9src/Error/Exception/WebhookException/WebhookException.php,9/d/9d309eb9ee5e071b6f3d6f57b94b6d73aa645e5e
 X
 (src/Error/Exception/WebhookException.php,9/2/920cea166d5e57eee261a91378626848bfe8edbe
 _
 /src/Forwarder/Newsletter/ForwarderInterface.php,7/2/721655fc0f9de6446a4b3e431beff01af812a473
 p
 @src/Forwarder/Newsletter/Identify/SubscriptionStartForwarder.php,e/d/edcc823a0746f20eead01a6f357c532f39a60ddd
+o
+?src/CDP/Analytics/Model/Subscription/Identify/IdentifyModel.php,e/c/ec1eb152693e7e17f9993108a90042f2c8e316a5
+y
+Isrc/CDP/Analytics/Model/Subscription/Identify/SubscriptionStartMapper.php,8/2/82340a149ba13f729f7c68e945cb32e5f295926b
+t
+Dsrc/CDP/Analytics/Model/Subscription/SubscriptionSourceInterface.php,4/8/48c624acea31a5d68f96c1b8fd98a9b33580fae1
+_
+/var/cache/test/ContainerSGg3fnC/removed-ids.php,9/f/9fba540dc2251d172b49999c8c618f358d938779

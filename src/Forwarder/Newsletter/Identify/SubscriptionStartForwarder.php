@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Forwarder\Newsletter\Identify;
 
+use App\CDP\Analytics\Model\Subscription\Identify\IdentifyModel;
+use App\CDP\Analytics\Model\Subscription\Identify\SubscriptionStartMapper;
 use App\DTO\Newsletter\NewsletterWebhook;
 use App\Forwarder\Newsletter\ForwarderInterface;
 
@@ -18,6 +20,7 @@ class SubscriptionStartForwarder implements ForwarderInterface
 
     public function forward(NewsletterWebhook $newsletterWebhook): void
     {
-        // TODO: Implement forward() method.
+        $model = new IdentifyModel();
+        (new SubscriptionStartMapper())->map($newsletterWebhook, $model);
     }
 }

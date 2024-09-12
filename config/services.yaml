@@ -26,3 +26,5 @@ services:
             tags: ['webhook.handler']
         App\Forwarder\Newsletter\ForwarderInterface:
             tags: [ 'forwarder.newsletter' ]
+
+           
