@@ -1,5 +1,3 @@
-# This file is the entry point to configure your own services.
-# Files in the packages/ subdirectory configure your dependencies.
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
@@ -21,14 +19,24 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    # In Symfony, the _instanceof configuration key allows you to automatically apply configuration settings to all services that implement a specific interface or extend a certain class. This is very useful for applying tags, method calls, or other configuration options uniformly across multiple services without needing to configure each one individually.
     _instanceof:
         App\Webhook\Handler\WebhookHandlerInterface:
-            tags: ['webhook.handler']
+            tags: [ 'webhook.handler' ]
         App\Forwarder\Newsletter\ForwarderInterface:
             tags: [ 'forwarder.newsletter' ]
 
+    # Services which will be doubled for tests
     App\CDP\Http\CdpClientInterface: '@App\CDP\Http\CdpClient'
+    App\Error\ErrorHandlerInterface: '@App\Error\ErrorHandler'
 
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+
+when@dev:
+    services:
+        App\Error\ErrorHandlerInterface: '@App\Error\DebugErrorHandler'
 
 when@test:
     services:
