@@ -61,3 +61,14 @@ t
 Dsrc/CDP/Analytics/Model/Subscription/SubscriptionSourceInterface.php,4/8/48c624acea31a5d68f96c1b8fd98a9b33580fae1
 _
 /var/cache/test/ContainerSGg3fnC/removed-ids.php,9/f/9fba540dc2251d172b49999c8c618f358d938779
+S
+#src/CDP/Http/CdpClientInterface.php,5/b/5b3e1a3f5502c6e569a4c9f9982424c832b1b4aa
+`
+0src/Tests/TestDoubles/CDP/Http/FakeCdpClient.php,2/0/2043ccee2c99b895b4de4f16cf4b5ca6d814fb87
+9
+	.env.test,c/5/c589161bbc055e8f5fc7ed13aae8551821ece4b6
+4
+.env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
